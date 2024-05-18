@@ -6,6 +6,7 @@ import Home from './pages/home'
 import Login from './pages/login'
 import Details from './pages/details'
 import Admin from './pages/admin'
+import Auth from './pages/auth'
 
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/details' element={<Details />} />
-        <Route path='/admin' element={<Admin/>} />
+        <Route path='/' element={<Auth />}>
+          <Route path='admin' element={<Admin/>} />
+        </Route>
       </Routes>
       <Footer />
     </>
